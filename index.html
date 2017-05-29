@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Nikhil </title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<meta name="Viewport" content="width=device-width initial-scale=1.0">
+	<link href = "css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<link href="css/full-slider.css" rel="stylesheet">
+	<link href="css/animations.css" rel="stylesheet">
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
+</head>
+
+<body data-spy="scroll" data-target="#navColor">
+
+	<nav id="navColor" class="navbar transparent navbar-inverse navbar-fixed-top" role="navigation">
+		<nav class="navbar-inner">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+	                </button>
+				</div>
+				
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right animatedParent" id="animatedParent">
+						<li class=""><a href="#myCarousel" id="nav-home">Home</a></li>
+						<!--<li class="animated fadeInRight"><a href="#about-me" id="nav-about-me">About Me</a></li>-->
+						<li class=""><a href="#resume" id="nav-resume">Resume</a></li>
+						<li class=""><a href="#projects" id="nav-projects">Projects</a></li>
+						<li class=""><a href="#contact-me" id="nav-contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</nav>
+
+	<!-- Full Page Image Background Carousel Header -->
+    <header id="myCarousel" class="carousel slide">
+    	<div class="overlay">	<!-- animatedParent animateOnce -->
+			<h1>Nikhil Nair</h1><!-- class="animated bounceInDown" -->
+
+			<style>
+				.icons > img {
+					display: none;
+				}
+			</style>
+			<div id="socialMedia" class="icons">
+				<img src="images/GitHub-Mark-Light-120px-plus.png" style="height:100px;width:100px;" />
+				<img src="images/1485293621_linkedin_circle_color.png" style="height:100px;width:100px;" />
+			</div>
+			<!--
+			<canvas width="450px"></canvas>
+			<script>
+			  	var can = document.querySelector("canvas"), ctx = can.getContext("2d"),
+			    txt = "Nikhil Nair", x = 0, i=0;
+
+				ctx.font = "90px Helvetica Bold";
+				ctx.lineWidth = 2;
+				ctx.fillStyle = "#b2b2b2";
+				ctx.strokeStyle = "#b2b2b2";
+				
+				setInterval(function(){
+				    ctx.setLineDash([i++,9999]);
+				    ctx.strokeText(txt, x, 100);
+				    ctx.fillText(txt, x, 100);
+				    i=i%500;
+				},10);
+
+			</script>-->
+		</div>
+
+        <!-- Wrapper for Slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <!--<div class="fill" style="background-color:#00004c"></div>-->
+                <!--<img src="images/background_1.png" />
+                <div  style="background-color: #000000;">
+                </div>-->
+                <style>
+                	div.background {
+                		height: 100vh;
+                		width: 100vw;
+                	}
+
+					div.transbox {
+					  	z-index: 1;
+					    background-color: #000000;
+					    position: absolute;
+					    display: inline;
+					    height: 100vh;
+					    width: 100vw;
+					    opacity: .8;
+					}
+                </style>
+                <div class="background">
+                	<div class="transbox"></div>
+				  	<img src="images/background_1.png" style="width: 100vw; height: 100vh; z-index: 10" />
+				</div>
+            </div>
+            <!--<div class="item">
+                <div class="fill" style="background-color:#00004c"></div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-color:#00004c"></div>
+            </div>-->
+        </div>
+    </header>
+
+    <div class="container-fluid" style="padding:0">
+    	<!--<div class="row">
+			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0; padding: 20px 0; background-color: rgb(0, 100, 300)">
+				<h1 class="animated flipInX">Who Am I</h1>
+			</div>
+		</div>-->
+		<section>
+	      <!--<div class="container-fluid" id="about-me" style="padding: 4% 3%; background-color: rgb(300, 100, 300)">
+	          <div class="row" style="padding:1% 0">
+	          	<div class="col-sm-7 col-sm-offset-5">
+	          		<div class="circle-image" style="background-image:url('images/profile.png');"></div>
+	          	</div>
+	          </div>
+	          <div class="row" style="padding: 1%">
+	          	<div class="col-sm-12">
+	          		<p style="font-size: 1.4em; text-align: justify">I’m Nikhil Nair, and welcome to my personal website! I a recent graduate with a degree in the field of Computer Science from Stony Brook University, NY.</p>
+
+					<p style="font-size: 1.4em; text-align: justify">Raised near the backwaters of Kerala, India, I was a late bloomer when it came to the field of technology. Moving to New York around 8th grade brought about my initial exposure to computers. My interest in computer science lies mostly in web development, and building my personal portfolio is a step in the direction of learning the necessary skills.</p>
+
+					<p style="font-size: 1.4em; text-align: justify">Beyond the world of technology, I am a huge sports enthusiast. The game of cricket has been a passion ever since I can remember, and I have gained an affinity towards tennis over the years as well. Additionally, I have been a consumer of various genres music and movies, and I love to learn about diverse cultures!</p>
+	          	</div>
+	          </div>
+	      	</div>-->	<!-- /.CONTAINER -->
+	    </section>	<!-- /.SECTION -->
+	    <section id="resume">
+	    	<div class="container-fluid" style="padding: 4% 3%; background-color: rgb(255, 255,255)">
+	    		<div class="row">
+	    			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0">
+	    				<h1 class="animated flipInX">My Resume</h1>
+	    			</div>
+	    		</div>
+	    		<div class="row">
+	    			<div style="left:0; width:100%;text-align:center">
+				        <a class="btn btn-primary view-pdf" href="Resume_2015.pdf">PDF</a>
+				        <a class="btn btn-primary" href="ResumeFall2015Winter.docx">WORD DOC</a>
+				    </div>
+				</div>
+	    	</div>
+	    </section>
+	    <!--<div id="projects" class="row">
+			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0; padding: 20px 0; background-color: #252525">
+				<h1 class="animated flipInX">My projects</h1>
+			</div>
+		</div>-->
+	    <section id="projects">
+	    	<div class="container-fluid" style="padding: 4% 3%; background-color: #252525">
+	    		<div class="row">
+	    			<div class="col-lg-4 col-sm-6">
+	                    <a data-toggle="modal" data-target="#modal1" class="portfolio-box">
+	                        <img src="images/projects/ZombieCrushSaga/1splashScreen.png" class="img-responsive" alt="" />
+	                        <div class="portfolio-box-caption">
+	                            <div class="portfolio-box-caption-content">
+	                                <div class="project-category text-faded">
+	                                    Core Java Application
+	                                </div>
+	                                <div class="project-name">
+	                                    Zombie Crush Saga
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </a>
+	    			</div>	<!-- /COL 1 -->
+
+	    			<div class="col-lg-4 col-sm-6">
+	    				<a class='portfolio-box' data-toggle="modal" data-target="#modal2" >
+	    					<img src="images/projects/DatingPlusPlus/1HomeScreen.png" class="img-responsive" alt="" />
+	    					<div class="portfolio-box-caption">
+	    						<div class="portfolio-box-caption-content">
+		    						<div class="project-category text-faded">
+		    							Java EE Application
+		    						</div>
+		    						<div class="project-name">
+		    							Dating Plus Plus
+		    						</div>
+		    					</div>
+	    					</div>
+	    				</a>
+	    			</div>
+	    			<div class="col-lg-4 col-sm-6">
+	    				<a href="#" class='portfolio-box'>
+	    					<img src="images/projects/ZombieCrushSaga/1splashScreen.png" class="img-responsive" alt="" />
+	    					<div class="portfolio-box-caption">
+	    						<div class="portfolio-box-caption-content">
+		    						<div class="project-category text-faded">
+		    							Java EE Application
+		    						</div>
+		    						<div class="project-name">
+		    							Schedule Sharp
+		    						</div>
+		    					</div>
+	    					</div>
+	    				</a>
+	    			</div>
+	    		</div>
+	    	</div>
+
+	    	<!-- PROJECT 1 MODAL -->
+	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="modal1" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+			      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">  
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					     <img class="img-responsive" src="images/projects/ZombieCrushSaga/1splashScreen.png" alt="...">
+					    </div>
+					    <div class="item">
+					      <img class="img-responsive" src="images/projects/ZombieCrushSaga/2levelScreen.png" alt="...">
+					    </div>
+					     <div class="item">
+					      <img class="img-responsive" src="images/projects/ZombieCrushSaga/3gameScreen.png" alt="...">
+					    </div>
+					  </div>
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+				  </div>	<!-- /Carousel -->
+				  <p style="background-color:white">ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC
+				  	  </p>
+			    </div>
+			  </div>
+			</div>	<!-- /MODAL 1 -->
+
+			<!-- PROJECT 2 MODAL -->
+	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true" id="modal2">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+			      <div id="carousel-example-generic-2" class="carousel slide" data-ride="carousel">  
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					     <img class="img-responsive" src="images/projects/DatingPlusPlus/1HomeScreen.png" alt="...">
+					    </div>
+					    <div class="item">
+					      <img class="img-responsive" src="images/projects/DatingPlusPlus/2Registration.png" alt="...">
+					    </div>
+					     <div class="item">
+					      <img class="img-responsive" src="images/projects/DatingPlusPlus/3Profile.png" alt="...">
+					    </div>
+					  </div>
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic-2" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic-2" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+				  </div>	<!-- /Carousel -->
+				  <p style="background-color:white">ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC
+				  	  </p>
+			    </div>
+			  </div>
+			</div>	<!-- /MODAL 1 -->
+	    </section>
+	    <!--<div id="contact-me" class="row" style="padding: 20px 0; background-color: rgb(0, 100, 300)">
+			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0">
+				<h1 class="animated flipInX">Contact Me</h1>
+			</div>
+		</div>-->
+	    <section style="position:relative">
+	    	<div id="googlemaps" style="height:550px; width:100%; position:aboslute; top:0; left:0; z-index:0"></div>
+	    	<div class="row" style="position:absolute; width:100%; height: 100%; opacity:0.2; top:0; background-color:black; "></div>
+	    	<form>
+	    		<div class="container" style="margin:0; padding:0">
+			    	<div class="row" style="margin:0; padding:0">
+						<div class="well" style="position:absolute; width:50%; margin:1% auto; z-index:1; top:2%; background:rgba(0, 0, 0, 0.7) none repeat scroll 0% 0%; left:25%; border:none">
+
+			                <div class="row" style="position: relative; text-align: center;margin: auto;width: 70%;">
+			                    <div class="col-sm-8 col-sm-offset-2">
+			                        <div class="form-group">
+			                            <label for="name">
+			                                Name</label>
+			                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+			                        </div>
+			                        <div class="form-group">
+			                            <label for="email">
+			                                Email Address</label>
+			                            <div class="input-group">
+			                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+			                                </span>
+			                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+			                        </div>
+			                        <div class="form-group">
+			                            <label for="name">
+			                                Message</label>
+			                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+			                                placeholder="Message"></textarea>
+			                        </div>
+			                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs"onmouseover="sayHi('btnContactUs')"><span>Submit</span></button>
+			                    </div>
+			                </div>
+				        </div>	 <!-- /DIV W/ CLASS "well" -->
+				    </div>	<!-- /ROW -->
+				</div>	<!-- /CONTAINER -->
+			</form>	<!-- /FORM -->
+	    </section>
+	</div>	<!-- END THE SUPER CONTAINER -->
+
+	<script src="js/css3-animate-it.js"></script>
+	<script src="js/custom.js"></script>
+
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+	<script type="text/javascript">
+ 
+		// The latitude and longitude of your business / place
+		var position = [40.712817, -74.006460];
+		 
+		function showGoogleMaps() {
+		 
+		    var latLng = new google.maps.LatLng(position[0], position[1]);
+		 
+		    var mapOptions = {
+		        zoom: 16, // initialize zoom level - the max value is 21
+		        streetViewControl: false, // hide the yellow Street View pegman
+		        scaleControl: true, // allow users to zoom the Google Map
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        center: latLng
+		    };
+		 
+		    map = new google.maps.Map(document.getElementById('googlemaps'),
+		        mapOptions);
+		 
+		    // Show the default red marker at the location
+		    marker = new google.maps.Marker({
+		        position: latLng,
+		        map: map,
+		        draggable: false,
+		        animation: google.maps.Animation.DROP
+		    });
+		}
+		 
+		google.maps.event.addDomListener(window, 'load', showGoogleMaps);
+	</script>
+</body>
+
+</html>
