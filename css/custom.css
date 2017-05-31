@@ -22,14 +22,15 @@ body{
   border-bottom: 3px solid transparent;
 }
 
+/*
 .nav > li > a:focus, .nav > li > a:hover, .nav.navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
 	border-bottom: 3px solid black;
 	background: transparent;
-    color: black;
+    color: white;
 }
-
+*/
 .nav.navbar-nav li a {
 	font-family: 'Merienda', cursive;
 	font-size: 2em;

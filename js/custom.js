@@ -2,6 +2,7 @@ $(document).ready(function(){
   	$('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Top</div>');
 	$(window).scroll(function () {
 
+		// ONCE THE USER STARTS SCROLLING, ADD BACKGROUND TO THE NAVBAR
 		if ($(this).scrollTop() > $(".overlay").offset().top) {
 			$('#toTop').fadeIn();
 			$('#navColor').addClass('navbar-below-main');
@@ -10,6 +11,8 @@ $(document).ready(function(){
 			$('#navColor').removeClass('navbar-below-main');
 		}
 	}); 
+
+	// ACTIVATED BY TO THE TOP BUTTON
 	$('#toTop').click(function(){
     	$("html, body").animate({ scrollTop: 0 }, 600);
     	return false;
@@ -22,6 +25,55 @@ $(document).ready(function(){
 
 	
 });
+
+var currentSectionID = "#myCarousel";
+
+// TO HANDLE MOUSE HOVERING OVER THE MENU ITEMS
+// HANDLE THIS IN JQUERY INSTEAD OF CSS, BECAUSE 
+// THE BACKGROUND CHANGES AS WE SCROLL DOWN, SO THE
+// COLORS NEED TO BE ADJUSTED PROPERLY.
+////.navbar-nav > li > a:focus, .navbar-nav > li > a:focus, #animatedParent > li > a:focus
+$("#animatedParent > li > a").hover(
+	function() {
+		var scroll = $(window).scrollTop();
+		if(scroll > $(".overlay").offset().top) {
+			$(this).css('border-bottom','3px solid black');
+		} else {
+			$(this).css('color', 'white');
+		}
+	}, function() {
+		var scroll = $(window).scrollTop();
+		if(scroll > $(".overlay").offset().top) {
+			$(this).css('border-bottom', 'none');
+			$("#animatedParent > li[class='active'] > a").css('border-bottom','none');
+		} else {
+			console.log("scroll is " + scroll + "\t")
+			$(this).css('color', 'rgb(157, 157, 157)');
+			$("#animatedParent > li[class='active'] > a").css('color','white');
+			//$("#animatedParent > li").not('.active').css('color', 'rgb(157, 157, 157)');
+		}
+	}
+);
+
+// SELECT ALL NAVBAR ITEMS THAT ARE ACTIVE AND GIVE THEM APPROPRIATE COLORS
+$(window).scroll(function(event) {
+	var scroll = $(window).scrollTop();
+	// USER HAS SCROLLED ENOUGH, NAVBARS' BACKGROUND HAS CHANGED
+	if(scroll > $(".overlay").offset().top) {
+		$("ul > li > a")
+			.css('color', 'rgb(157, 157, 157)')
+			.css('background','transparent')
+			.css('border-bottom','none');
+		$("ul > li[class='active'] > a")
+			.css('color', 'rgb(157, 157, 157)')
+			.css('background','transparent')
+			.css('border-bottom','3px solid black');
+	} else {	// WHEN THE USER HASN'T SCROLLED DOWN FAR ENOUGH
+		$("ul > li > a").css('color', 'rgb(157, 157, 157)');
+		$("ul > li[class='active'] > a").css('color', 'white');
+	}
+});
+//$("ul[class='nav.navbar-nav'] > li[class='active'")
 
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -44,6 +96,8 @@ $('a[href*="#"]')
         $('html, body').animate({
           scrollTop: target.offset().top - $("#navColor").height()
         }, 1000, function() {
+
+
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -75,7 +129,7 @@ $('a[href*="#"]')
 
 		html='<div class="modal fade" id="myModal">'; 
 		html += '<div class="modal-dialog" style="width:97%">'; 
-		html += '<div class="modal-content">'; 
+		html += '<div class="modal-content" style="padding:15px">'; 
 		/*html += '<div class="modal-header">'; 
 		html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>'; 
 		if(b.title.length>0) {
