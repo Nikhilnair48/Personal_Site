@@ -72,6 +72,7 @@ body{
   	overflow: hidden;
   	animation: type 4s steps(11, end);
 }
+/*
 #animatedParent {
     margin-right: -100%;
     animation-name: navbar-animation;
@@ -80,15 +81,23 @@ body{
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-fill-mode: forwards;
-}
+}*/
 
 @keyframes navbar-animation {
     0%{ margin-right: -100%;}
     100%{ margin-right: 0%;}
 }
 
-#socialMedia > img:hover {
-    border: 2px solid;
+/* IMAGE ICONS FOR SOCIAL MEDIA (LINKEDIN/GITHUB) ARE HIDDEN ON LOAD */
+.icons > a {
+    padding: 5px;
+}
+.icons > a > img {
+    display: none;
+}
+
+#socialMedia > a > img:hover {
+    transform: scale(1.10);
 }
 
 /* TO THE TOP BUTTON */
@@ -211,4 +220,32 @@ body{
 .row {
 	margin-left: 0;
 	margin-right: 0;
+}
+
+/* BOOTSTRAP ADDS A SHADE OF BLACK FOR THE MODAL UPON HOVERING. NOPE */
+.carousel-control.right {
+    right: 0;
+    left: auto;
+    background-image: none;
+}
+
+.carousel-control.left {
+    background-image: none
+}
+.carousel.slide > .carousel-inner {
+    border-radius: 2em;
+}
+
+/* SCALE FOR SMALLER SCREENS */
+@media screen and (max-width: 800px) {
+    .overlay > h1 {
+        /*display: inline-block;*/
+        font-size: 6em;
+        font-weight: 700;
+        font-family: 'Kaushan Script', cursive;
+        margin-right: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: type 4s steps(11, end);
+    }
 }

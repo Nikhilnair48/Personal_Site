@@ -18,15 +18,38 @@ $(document).ready(function(){
     	return false;
 	});
 
-	setTimeout(function() {
-		$("img:hidden:first").fadeIn();
-		$("img:hidden:first").fadeIn(450);
-	}, 4500);
+	//var scroll = $(window).scrollTop();
+	// USE VISITS PAGE, SCROLLS DOWN, AND LOADS PAGE
+		// WE'RE NOT LONGER AT HOME, SO HANDLE ALL THOSE CASES HERE
+	if($(this).scrollTop() > $(".overlay").offset().top) {
+		//$('#animatedParent').css('margin-right', '0%');
+		$('#toTop').fadeIn();
+		$('#navColor').addClass('navbar-below-main');
 
-	
+		// CODE BLOCK IS THE SAME AS THE ONE TO HANDLE SCROLLING
+		$("ul > li > a")
+			.css('color', 'rgb(157, 157, 157)')
+			.css('background','transparent')
+			.css('border-bottom','none');
+		$("ul > li[class='active'] > a")
+			.css('color', 'rgb(157, 157, 157)')
+			.css('background','transparent')
+			.css('border-bottom','3px solid black');
+
+		$('#animatedParent > li > a').css('border-bottom', 'none');
+		$("#animatedParent > li[class='active'] > a").css('border-bottom','none');
+	}
+
+	// TIME OUT FOR SOCIAL MEDIA ICONS TO FADE IN -- HOME PAGE
+	setTimeout(function() {
+		$("a > img:hidden:first").fadeIn();
+		$("a > img:hidden:first").fadeIn(450);
+	}, 1000);
 });
 
-var currentSectionID = "#myCarousel";
+
+// NOTE BEING USED - READY FOR MANUAL GARBAGE COLLECTION
+//var currentSectionID = "#myCarousel";
 
 // TO HANDLE MOUSE HOVERING OVER THE MENU ITEMS
 // HANDLE THIS IN JQUERY INSTEAD OF CSS, BECAUSE 
