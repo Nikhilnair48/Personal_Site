@@ -3,6 +3,10 @@ body{
     position: relative; /* required */
 }
 
+.ytp-watermark.yt-uix-sessionlink {
+    display:none;
+}
+
 .navbar {
 	margin-bottom: 0;
 }
@@ -232,9 +236,32 @@ body{
 .carousel-control.left {
     background-image: none
 }
-.carousel.slide > .carousel-inner {
-    border-radius: 2em;
+
+
+/* 
+THE BELOW THREE CLASSES HAVE BEEN ADDED BECAUSE CLICKING ON THE PROJECT ICON 
+LEADS TO A MODAL BEING OPEN. FOR INCREASED "RESPONSIVENESS," BOOTSTRAP ADDED
+CLASSES THAT SHIFT THE NAVBAR AND THE CONTENT ON THE PAGE. THIS IS TO OFFSET 
+THAT CHANGE.
+REFERENCE:https://stackoverflow.com/questions/19960162/bootstrap-3-modal-fires-and-causes-page-to-shift-to-the-left-momentarily-brows;
+*/
+.modal-open[style] {
+    padding-right: 0px !important;
 }
+
+/*.modal {
+ overflow-y: auto;
+}
+
+.modal-open {
+ overflow: auto;
+}*/
+
+
+
+/*.carousel.slide > .carousel-inner {
+    border-radius: 2em;
+}*/
 
 /* SCALE FOR SMALLER SCREENS */
 @media screen and (max-width: 800px) {
@@ -247,5 +274,13 @@ body{
         white-space: nowrap;
         overflow: hidden;
         animation: type 4s steps(11, end);
+    }
+
+    .modal {
+        overflow-y: auto;
+    }
+
+    .modal-open {
+        overflow: auto;
     }
 }

@@ -10,12 +10,14 @@
 
 	<meta name="Viewport" content="width=device-width initial-scale=1.0">
 	<link href = "css/bootstrap.min.css" rel="stylesheet">
+	<!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet">-->
 	<link href="css/custom.css" rel="stylesheet">
 	<link href="css/full-slider.css" rel="stylesheet">
 	<link href="css/animations.css" rel="stylesheet">
 	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>-->
 	<link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
 </head>
@@ -77,12 +79,22 @@
 					    display: inline;
 					    height: 100vh;
 					    width: 100vw;
-					    opacity: .8;
+					    opacity: .3;
+					}
+					video::-webkit-media-controls {
+					  display: none;
 					}
                 </style>
                 <div class="background">
                 	<div class="transbox"></div>
-				  	<img src="images/background_1.png" style="width: 100vw; height: 100vh; z-index: 10" />
+                	<video loop="loop" id="myVideo" style="width: 100vw; height: 100vh; z-index: 10" autoplay="autoplay" muted controls="false">
+  						<source src="https://s3.amazonaws.com/nikhil-nair-personal-website-home-page-video/my_website_home_page.mp4" type="video/mp4">
+					</video>
+                	<!--<iframe style="width: 100vw; height: 100vh; z-index: 10" src="https://www.youtube.com/embed/smxmMc9HOec?autoplay=1&modestbranding=1&showinfo=0&controls=0&loop=1&playlist=smxmMc9HOec&showinfo=0"
+   width="560" height="315" frameborder="0" allowfullscreen></iframe>-->
+				  	<!--
+					https://youtu.be/smxmMc9HOec
+				  	<img src="images/background_1.png" style="width: 100vw; height: 100vh; z-index: 10" />-->
 				</div>
             </div>
             <!--<div class="item">
@@ -218,6 +230,45 @@
 	    	<!-- /PROJECTS CONTAINER -->
 
 	    	<!-- PROJECT 1 MODAL -->
+	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1" id="modal1" aria-hidden="true">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content" style="padding:15px">
+			      <h2 style="text-align: center">Chess Game</h2>
+			      <div id="carousel-for-chess" class="carousel slide" data-ride="carousel">  
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner">
+					    <div class="item active">
+					     <img class="img-responsive" src="images/projects/Chess/1SplashScreen.png" alt="...">
+					    </div>
+					    <div class="item">
+					      <img class="img-responsive" src="images/projects/Chess/2GameScreen1.png" alt="...">
+					    </div>
+					     <div class="item">
+					      <img class="img-responsive" src="images/projects/Chess/2GameScreen2.png" alt="...">
+					    </div>
+					  </div>
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-for-chess" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-for-chess" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					  </a>
+				  </div>	<!-- /Carousel -->
+				  <!-- PROJECT DETAILS -->
+				  <h3 class="project-question">What am I looking at?</h3>
+				  <p class="project-answer">A Chess clone!</p>
+				  <h3 class="project-question">University or side project?</h3>
+				  <p class="project-answer">On the side</p>
+				  <h3 class="project-question">Don't believe ya. Gimme proof.</h3>
+				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/MyChessGame2016">github</a>.</p> 
+				  <p class="project-answer">Relevant fun fact: I use tabs, not spaces.</p>
+				  <!-- /PROJECT DETAILS -->
+			    </div>
+			  </div>
+			</div>	<!-- /PROJECT 1 MODAL -->
+
+	    	<!-- PROJECT 1 MODAL -->
 	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="modal1" aria-hidden="true">
 			  <div class="modal-dialog modal-lg">
 				<div class="modal-content" style="padding:15px">
@@ -292,7 +343,7 @@
 				  <h3>Don't believe ya. Gimme proof.</h3>
 				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/ZombieCrushSaga">github</a>.</p>
 
-				  <p>Short fun fact: I had 4 projects due the first week of December 2014. So my team &amp; I spent less than a week slogging over the final phase (difficulty at the time: infinity) the project. Yet, we were ranked #1 out of 20+ teams for the class competition. I'd like to see the code written by the other teams. Anyways, all I'm trying to say is -- please don't read the code.</p>
+				  <p>Short fun fact: I had 4 projects due the first week of December 2014. So my team &amp; I spent just six days slogging over the final phase of the project (difficulty at the time: infinity). Yet, we were ranked #1 out of 20+ teams for the class competition. I'd like to see the code written by the other teams. Anyways, all I'm trying to say is -- please don't read the code.</p>
 				  <!-- /PROJECT DETAILS -->
 			    </div>
 			  </div>
@@ -327,14 +378,15 @@
 				  <!-- PROJECT DETAILS -->
 				  <h3>What am I looking at?</h3>
 				  <p style="background-color:white">
-				  	The best of Facebook &amp; Blackboard that went unnoticed investors.
+				  	The best of Facebook &amp; Blackboard that went unnoticed by investors. To elaborate, Schedule Sharp offers a social media-esque platform allowing students to interact with peers and teachers. Teachers may continue educating the classroom by not only assigning work, but responding to student enquiries within the application. On has to ask - what could possibly go wrong?
+
 				  </p>
 				  <h3>University or side project?</h3>
 				  <p>Schedule Sharp was built for CSE 308 at Stony Brook University with <a href="http://www3.cs.stonybrook.edu/~stoller/">Prof.Stoller</a></p>
 				  <h3>Don't believe ya. Gimme proof.</h3>
 				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/ZombieCrushSaga">github</a>.</p>
 
-				  <p>Short fun fact: I had 4 projects due the first week of December 2014. So my team &amp; I spent less than a week slogging over the final phase (difficulty at the time: infinity) the project. Yet, we were ranked #1 out of 20+ teams for the class competition. I'd like to see the code written by the other teams. Anyways, all I'm trying to say is -- please don't read the code.</p>
+				  <p>Relevant fun fact: Stony Brook is a </p>
 				  <!-- /PROJECT DETAILS -->
 			    </div>
 			  </div>
@@ -346,7 +398,7 @@
 				<h1 class="animated flipInX">Contact Me</h1>
 			</div>
 		</div>-->
-	    <section style="position:relative">
+	    <section style="position:relative" id="contact-me">
 	    	<div id="googlemaps" style="height:550px; width:100%; position:aboslute; top:0; left:0; z-index:0"></div>
 	    	<div class="row" style="position:absolute; width:100%; height: 100%; opacity:0.2; top:0; background-color:black; "></div>
 	    	<form>

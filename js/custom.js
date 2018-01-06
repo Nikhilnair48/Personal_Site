@@ -1,8 +1,21 @@
 $(document).ready(function(){
+  	$('.modal').on('show.bs.modal', function () {
+        if ($(document).height() > $(window).height()) {
+            // no-scroll
+            $('body').addClass("modal-open-noscroll");
+        }
+        else {
+            $('body').removeClass("modal-open-noscroll");
+        }
+    });
+    $('.modal').on('hide.bs.modal', function () {
+        $('body').removeClass("modal-open-noscroll");
+    });
+
   	$('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Top</div>');
 	$(window).scroll(function () {
 
-		// ONCE THE USER STARTS SCROLLING, ADD BACKGROUND TO THE NAVBAR
+		// ONCE THE USER STARTS SCROLLING, CHANGE THE BACKGROUND OF THE NAVBAR
 		if ($(this).scrollTop() > $(".overlay").offset().top) {
 			$('#toTop').fadeIn();
 			$('#navColor').addClass('navbar-below-main');
@@ -56,8 +69,7 @@ $(document).ready(function(){
 // THE BACKGROUND CHANGES AS WE SCROLL DOWN, SO THE
 // COLORS NEED TO BE ADJUSTED PROPERLY.
 ////.navbar-nav > li > a:focus, .navbar-nav > li > a:focus, #animatedParent > li > a:focus
-$("#animatedParent > li > a").hover(
-	function() {
+$("#animatedParent > li > a").hover(function() {
 		var scroll = $(window).scrollTop();
 		if(scroll > $(".overlay").offset().top) {
 			$(this).css('border-bottom','3px solid black');
@@ -79,10 +91,19 @@ $("#animatedParent > li > a").hover(
 );
 
 // SELECT ALL NAVBAR ITEMS THAT ARE ACTIVE AND GIVE THEM APPROPRIATE COLORS
+// RGB(157, 157, 157) -> GREY.
 $(window).scroll(function(event) {
 	var scroll = $(window).scrollTop();
+	var positionToCompare = $(".overlay").offset().top;
+
+	if($('#navColor').hasClass("navbar-below-main")) {
+			var navColor = $("#navColor").height();
+			positionToCompare += navColor;
+			console.log("NAVCOLOR: " + positionToCompare);
+	}
 	// USER HAS SCROLLED ENOUGH, NAVBARS' BACKGROUND HAS CHANGED
-	if(scroll > $(".overlay").offset().top) {
+	if(scroll > positionToCompare) {
+		//console.log("IF: scroll " + scroll + " shit to top " + $(".overlay").offset().top + " positionToCompare " + positionToCompare);
 		$("ul > li > a")
 			.css('color', 'rgb(157, 157, 157)')
 			.css('background','transparent')
@@ -92,6 +113,7 @@ $(window).scroll(function(event) {
 			.css('background','transparent')
 			.css('border-bottom','3px solid black');
 	} else {	// WHEN THE USER HASN'T SCROLLED DOWN FAR ENOUGH
+		//console.log("ELSE: scroll " + scroll + " shit to top " + $(".overlay").offset().top);
 		$("ul > li > a").css('color', 'rgb(157, 157, 157)');
 		$("ul > li[class='active'] > a").css('color', 'white');
 	}
@@ -211,3 +233,38 @@ function showMe(id) {
 	if(rowOut[j] !== (id+'-info'))
 		$('#'+id+'-info').slideToggle(500);
 }
+
+$(document).on('DOMNodeInserted', function(e) {
+		if($("#animatedParent").children().hasClass("active")) {
+			
+		}
+});
+
+/*
+var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        console.log(mutation);
+        if (mutation.addedNodes && mutation.addedNodes.length > 0) {
+            // element added to DOM
+            var hasClass = [].some.call(mutation.addedNodes, function(el) {
+                return el.classList.contains('active')
+            });
+            if (hasClass) {
+                // element has class `MyClass`
+                console.log("ACTIVE HAS BEEN ADDED");
+            }
+        }
+    });
+});
+
+var config = {
+    attributes: true,
+    childList: true,
+    characterData: true
+};
+//
+//var element = document;
+var elements = document.getElementById('animatedParent');
+var aaa = document.body.children[0].children[0].children[0].children[1].children[0];
+observer.observe(document.body.children[0].children[0].children[0].children[1].children[0].children, config);
+*/
