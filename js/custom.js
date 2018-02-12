@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  	$('.modal').on('show.bs.modal', function () {
+  	/*$('.modal').on('show.bs.modal', function () {
         if ($(document).height() > $(window).height()) {
             // no-scroll
             $('body').addClass("modal-open-noscroll");
@@ -10,7 +10,7 @@ $(document).ready(function(){
     });
     $('.modal').on('hide.bs.modal', function () {
         $('body').removeClass("modal-open-noscroll");
-    });
+    });*/
 
   	$('body').append('<div id="toTop" class="btn btn-info"><span class="glyphicon glyphicon-chevron-up"></span> Top</div>');
 	$(window).scroll(function () {
@@ -58,6 +58,12 @@ $(document).ready(function(){
 		$("a > img:hidden:first").fadeIn();
 		$("a > img:hidden:first").fadeIn(450);
 	}, 1000);
+
+	$('#project1').on('click',function(){
+      //$(this).parent().children().toggle();  //swaps the display:none between the two spans
+      $(this).parent().parent().find("#project1ContentWrapper").slideToggle();  //swap the display of the main content with slide action
+
+  });
 });
 
 

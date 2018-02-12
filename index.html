@@ -62,10 +62,6 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <!--<div class="fill" style="background-color:#00004c"></div>-->
-                <!--<img src="images/background_1.png" />
-                <div  style="background-color: #000000;">
-                </div>-->
                 <style>
                 	div.background {
                 		height: 100vh;
@@ -90,19 +86,9 @@
                 	<video loop="loop" id="myVideo" style="width: 100vw; height: 100vh; z-index: 10" autoplay="autoplay" muted controls="false">
   						<source src="https://s3.amazonaws.com/nikhil-nair-personal-website-home-page-video/my_website_home_page.mp4" type="video/mp4">
 					</video>
-                	<!--<iframe style="width: 100vw; height: 100vh; z-index: 10" src="https://www.youtube.com/embed/smxmMc9HOec?autoplay=1&modestbranding=1&showinfo=0&controls=0&loop=1&playlist=smxmMc9HOec&showinfo=0"
-   width="560" height="315" frameborder="0" allowfullscreen></iframe>-->
-				  	<!--
-					https://youtu.be/smxmMc9HOec
-				  	<img src="images/background_1.png" style="width: 100vw; height: 100vh; z-index: 10" />-->
 				</div>
             </div>
-            <!--<div class="item">
-                <div class="fill" style="background-color:#00004c"></div>
-            </div>
-            <div class="item">
-                <div class="fill" style="background-color:#00004c"></div>
-            </div>-->
+            
         </div>
     </header>
 
@@ -145,19 +131,14 @@
 				</div>
 	    	</div>
 	    </section>
-	    <!--<div id="projects" class="row">
-			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0; padding: 20px 0; background-color: #252525">
-				<h1 class="animated flipInX">My projects</h1>
-			</div>
-		</div>-->
-
+	    
 	    <section id="projects">
 	    	<!-- PROJECTS CONTAINER -->
 	    	<div class="container-fluid" style="padding: 1.5% 3%; background-color: #252525">
 	    		<div class="row">
 	    			<!-- ROW 1 PROJECT 1 -->
-	    			<div class="col-lg-4 col-sm-6">
-	                    <a data-toggle="modal" data-target="#modal1" class="portfolio-box">
+	    			<div class="col-lg-4 col-sm-6" id="project1">
+	                    <a class="portfolio-box">
 	                        <img src="images/projects/ZombieCrushSaga/1splashScreen.png" class="img-responsive" alt="" />
 	                        <div class="portfolio-box-caption">
 	                            <div class="portfolio-box-caption-content">
@@ -172,232 +153,22 @@
 	                    </a>
 	    			</div>	<!-- /PROJECT 1 -->
 	    		</div>
-	    	</div>
-	    	<div class="container-fluid" style="padding: 1.5% 3%; background-color: #252525">
-	    		<div class="row">
-	    			<!-- PROJECT 1 -->
-	    			<div class="col-lg-4 col-sm-6">
-	                    <a data-toggle="modal" data-target="#modal1" class="portfolio-box">
-	                        <img src="images/projects/ZombieCrushSaga/1splashScreen.png" class="img-responsive" alt="" />
-	                        <div class="portfolio-box-caption">
-	                            <div class="portfolio-box-caption-content">
-	                                <div class="project-category text-faded">
-	                                    Core Java Application
-	                                </div>
-	                                <div class="project-name">
-	                                    Zombie Crush Saga
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </a>
-	    			</div>	<!-- /PROJECT 1 -->
-
-					<!-- PROJECT 2 -->
-	    			<div class="col-lg-4 col-sm-6">
-	    				<a class='portfolio-box' data-toggle="modal" data-target="#modal2" >
-	    					<img src="images/projects/DatingPlusPlus/1HomeScreen.png" class="img-responsive" alt="" />
-	    					<div class="portfolio-box-caption">
-	    						<div class="portfolio-box-caption-content">
-		    						<div class="project-category text-faded">
-		    							Java EE Application
-		    						</div>
-		    						<div class="project-name">
-		    							Dating Plus Plus
-		    						</div>
-		    					</div>
-	    					</div>
-	    				</a>
-	    			</div>	<!-- /PROJECT 2 -->
-
-	    			<!-- PROJECT 3 -->
-	    			<div class="col-lg-4 col-sm-6">
-	    				<a href="#" class='portfolio-box' data-toggle="modal" data-target="#modal3" >
-	    					<img src="images/projects/ScheduleSharp/1loginScreen.png" class="img-responsive" alt="" />
-	    					<div class="portfolio-box-caption">
-	    						<div class="portfolio-box-caption-content">
-		    						<div class="project-category text-faded">
-		    							Java EE Application
-		    						</div>
-		    						<div class="project-name">
-		    							Schedule Sharp
-		    						</div>
-		    					</div>
-	    					</div>
-	    				</a>
-	    			</div>	<!-- /PROJECT 3 -->
-	    		</div>	<!-- /ROW -->
+				<div id="project1ContentWrapper" style="display:none;padding-left:15px;padding-right: 15px" class="col-lg-12">
+					<div id="project1Content" style="background-color:white"> 
+						<div class="project-detail-header" style="text-align:center;background-color: white; ">
+						<h2>Chess Game</h2>
+						</div>
+						<div class="project-detail-images" style="padding:2% 15%">
+							<img class="img-responsive" src="images/projects/Chess/2GameScreen1.png" alt="...">
+						</div>
+						<div class="project-detail-text">
+						</div>
+					</div>
+				</div>
 	    	</div>
 	    	<!-- /PROJECTS CONTAINER -->
-
-	    	<!-- PROJECT 1 MODAL -->
-	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1" id="modal1" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
-				<div class="modal-content" style="padding:15px">
-			      <h2 style="text-align: center">Chess Game</h2>
-			      <div id="carousel-for-chess" class="carousel slide" data-ride="carousel">  
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					     <img class="img-responsive" src="images/projects/Chess/1SplashScreen.png" alt="...">
-					    </div>
-					    <div class="item">
-					      <img class="img-responsive" src="images/projects/Chess/2GameScreen1.png" alt="...">
-					    </div>
-					     <div class="item">
-					      <img class="img-responsive" src="images/projects/Chess/2GameScreen2.png" alt="...">
-					    </div>
-					  </div>
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-for-chess" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-for-chess" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
-				  </div>	<!-- /Carousel -->
-				  <!-- PROJECT DETAILS -->
-				  <h3 class="project-question">What am I looking at?</h3>
-				  <p class="project-answer">A Chess clone!</p>
-				  <h3 class="project-question">University or side project?</h3>
-				  <p class="project-answer">On the side</p>
-				  <h3 class="project-question">Don't believe ya. Gimme proof.</h3>
-				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/MyChessGame2016">github</a>.</p> 
-				  <p class="project-answer">Relevant fun fact: I use tabs, not spaces.</p>
-				  <!-- /PROJECT DETAILS -->
-			    </div>
-			  </div>
-			</div>	<!-- /PROJECT 1 MODAL -->
-
-	    	<!-- PROJECT 1 MODAL -->
-	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="modal1" aria-hidden="true">
-			  <div class="modal-dialog modal-lg">
-				<div class="modal-content" style="padding:15px">
-			      <h2 style="text-align: center">Zombie Crush Saga</h2>
-			      <div id="carousel-for-zcs" class="carousel slide" data-ride="carousel">  
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					     <img class="img-responsive" src="images/projects/ZombieCrushSaga/1splashScreen.png" alt="...">
-					    </div>
-					    <div class="item">
-					      <img class="img-responsive" src="images/projects/ZombieCrushSaga/2levelScreen.png" alt="...">
-					    </div>
-					     <div class="item">
-					      <img class="img-responsive" src="images/projects/ZombieCrushSaga/3gameScreen.png" alt="...">
-					    </div>
-					  </div>
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-for-zcs" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-for-zcs" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
-				  </div>	<!-- /Carousel -->
-				  <!-- PROJECT DETAILS -->
-				  <h3 class="project-question">What am I looking at?</h3>
-				  <p class="project-answer">A game similar to Candy Crush Saga, but wait for it -- with zombies!</p>
-				  <h3 class="project-question">University or side project?</h3>
-				  <p class="project-answer">Zombie Crush Saga was built for CSE 219 at Stony Brook University with <a href="http://www3.cs.stonybrook.edu/~richard/">Prof.McGorilla</a> (nailed it!)</p>
-				  <h3 class="project-question">Don't believe ya. Gimme proof.</h3>
-				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/ZombieCrushSaga">github</a>.</p> 
-				  <p class="project-answer">Relevant fun fact: I use tabs, not spaces.</p>
-				  <!-- /PROJECT DETAILS -->
-			    </div>
-			  </div>
-			</div>	<!-- /PROJECT 1 MODAL -->
-
-			<!-- PROJECT 2 MODAL -->
-	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true" id="modal2">
-			  <div class="modal-dialog modal-lg">
-				<div class="modal-content" style="padding:15px">
-			      <div id="carousel-for-dpp" class="carousel slide" data-ride="carousel">  
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					     <img class="img-responsive" src="images/projects/DatingPlusPlus/1HomeScreen.png" alt="...">
-					    </div>
-					    <div class="item">
-					      <img class="img-responsive" src="images/projects/DatingPlusPlus/2Registration.png" alt="...">
-					    </div>
-					     <div class="item">
-					      <img class="img-responsive" src="images/projects/DatingPlusPlus/3Profile.png" alt="...">
-					    </div>
-					  </div>
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-for-dpp" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-for-dpp" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
-				  </div>	<!-- /Carousel -->
-				  <!-- PROJECT DETAILS -->
-				  <h3>What am I looking at?</h3>
-				  <p style="background-color:white">
-				  	A dating website, if used, could definitely find your soulmate.
-				  </p>
-				  <h3>University or side project?</h3>
-				  <p>Dating Plus Plus (clearly not a post-increment reference. who are we? CS majors?) was built for CSE 305 at Stony Brook University with <a href="http://www3.cs.stonybrook.edu/~sas/">Prof.Smolka</a></p>
-				  <h3>Don't believe ya. Gimme proof.</h3>
-				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/ZombieCrushSaga">github</a>.</p>
-
-				  <p>Short fun fact: I had 4 projects due the first week of December 2014. So my team &amp; I spent just six days slogging over the final phase of the project (difficulty at the time: infinity). Yet, we were ranked #1 out of 20+ teams for the class competition. I'd like to see the code written by the other teams. Anyways, all I'm trying to say is -- please don't read the code.</p>
-				  <!-- /PROJECT DETAILS -->
-			    </div>
-			  </div>
-			</div>	<!-- /MODAL 2 -->
-
-			<!-- PROJECT 3 MODAL -->
-	    	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel2" aria-hidden="true" id="modal3">
-			  <div class="modal-dialog modal-lg">
-				<div class="modal-content" style="padding:15px">
-			      <div id="carousel-for-ss" class="carousel slide" data-ride="carousel">  
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					     <img class="img-responsive" src="images/projects/ScheduleSharp/1loginScreen.png" alt="...">
-					    </div>
-					    <!--<div class="item">
-					      <img class="img-responsive" src="images/projects/DatingPlusPlus/2Registration.png" alt="...">
-					    </div>
-					     <div class="item">
-					      <img class="img-responsive" src="images/projects/DatingPlusPlus/3Profile.png" alt="...">
-					    </div>-->
-					  </div>
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-for-ss" role="button" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-for-ss" role="button" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
-				  </div>	<!-- /Carousel -->
-				  <!-- PROJECT DETAILS -->
-				  <h3>What am I looking at?</h3>
-				  <p style="background-color:white">
-				  	The best of Facebook &amp; Blackboard that went unnoticed by investors. To elaborate, Schedule Sharp offers a social media-esque platform allowing students to interact with peers and teachers. Teachers may continue educating the classroom by not only assigning work, but responding to student enquiries within the application. On has to ask - what could possibly go wrong?
-
-				  </p>
-				  <h3>University or side project?</h3>
-				  <p>Schedule Sharp was built for CSE 308 at Stony Brook University with <a href="http://www3.cs.stonybrook.edu/~stoller/">Prof.Stoller</a></p>
-				  <h3>Don't believe ya. Gimme proof.</h3>
-				  <p>Source code available at my <a href="https://github.com/Nikhilnair48/ZombieCrushSaga">github</a>.</p>
-
-				  <p>Relevant fun fact: Stony Brook is a </p>
-				  <!-- /PROJECT DETAILS -->
-			    </div>
-			  </div>
-			</div>	<!-- /MODAL 3 -->
-
 	    </section>
-	    <!--<div id="contact-me" class="row" style="padding: 20px 0; background-color: rgb(0, 100, 300)">
-			<div class="col-sm-12 animatedParent animateOnce" style="text-align: center; left: 0">
-				<h1 class="animated flipInX">Contact Me</h1>
-			</div>
-		</div>-->
+
 	    <section style="position:relative" id="contact-me">
 	    	<div id="googlemaps" style="height:550px; width:100%; position:aboslute; top:0; left:0; z-index:0"></div>
 	    	<div class="row" style="position:absolute; width:100%; height: 100%; opacity:0.2; top:0; background-color:black; "></div>
